@@ -1,0 +1,80 @@
+html {
+    height: 100%;
+}
+
+body {
+    background-color: #2f3035;
+    background-image: url(img/R.jfif);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+header {
+    
+    height: 118px;
+    text-align: center;
+}
+
+nav {
+    background-color: rgba(0, 0, 0, 0.338);
+    text-align: center;
+    padding-top: 14px;
+    padding-bottom: 14px;
+}
+
+footer {
+    background-color:rgba(0, 0, 0, 0.562);
+    height: 100px;
+}
+
+footer p {
+    text-align: center;
+    font-size: 20px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+h1 {
+    font-size: 100px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    text-align: center;
+}
+main p {
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    text-align: center;
+    padding-left: 460px;
+    padding-right: 460px;
+}
+main a {
+    font-size: 30px;
+    color: white;
+    padding-left: 630px;
+    padding-right: 630px;
+    font-style: italic;
+}
+
+map {
+    padding-top: 100px;
+    padding-left: 250px;
+    padding-right: 250px;
+}
+
+.menu {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-left: 25px;
+}
+
+.contact {
+    font-size: 100px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    text-align: center;
+    color: aqua;
+}

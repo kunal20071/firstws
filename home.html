@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Adare Restaurant</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<script>
+    function includeHTML() {
+      var z, i, elmnt, file, xhttp;
+      /* Loop through a collection of all HTML elements: */
+      z = document.getElementsByTagName("*");
+      for (i = 0; i < z.length; i++) {
+        elmnt = z[i];
+        /*search for elements with a certain atrribute:*/
+        file = elmnt.getAttribute("w3-include-html");
+        if (file) {
+          /* Make an HTTP request using the attribute value as the file name: */
+          xhttp = new XMLHttpRequest();
+          xhttp.onreadystatechange = function() {
+            if (this.readyState == 4) {
+              if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+              if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+              /* Remove the attribute, and call this function once more: */
+              elmnt.removeAttribute("w3-include-html");
+              includeHTML();
+            }
+          }
+          xhttp.open("GET", file, true);
+          xhttp.send();
+          /* Exit the function: */
+          return;
+        }
+      }
+    }
+    </script>
+
+<body>
+    
+    <div class="container">
+
+        <div w3-include-html="header.html"></div>
+
+        <main>
+            <h1>
+                Let's meat 
+            </h1>
+            <p>
+                We love sharing good food with great people. We bring over 30 years industry experience and passion to Adare. 
+                With dishes that are carefully designed to bring you a truly satisfying Irish food experience that you are sure 
+                to remember.
+            </p>
+
+            <a href="mailto:kunal20071@outlook.com">Make a Reservation</a>
+        </main>
+
+        <map>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2425.4103703023084!2d-8.782774484209135!3d52.562189679822204!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x485b460ddb875af7%3A0xdb34accde986ee58!2sThe%20Carriage%20House%20at%20Adare%20Manor!5e0!3m2!1sen!2sin!4v1630823782711!5m2!1sen!2sin" width="1000" height="600" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </map>
+        <section>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/vvpCnjyjTuU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+            <script type='text/javascript' src='//www.opentable.com/widget/reservation/loader?rid=412810&type=standard&theme=standard&iframe=true&domain=com&lang=en-US&newtab=false&ot_source=Restaurant%20website'></script>
+        </section>
+
+        <div w3-include-html="footer.html"></div>
+
+    </div>
+
+</body>
+
+<script>
+    includeHTML();
+    </script>
+
+</html>
